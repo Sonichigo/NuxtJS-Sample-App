@@ -5,24 +5,23 @@
       <nav
         class="navbar navbar-expand-lg navbar-light primary-menu"
         style="background-color: #fff">
-        <a class="navbar-brand" href="#">
-          <img class="navbar-logo" src="../assets/logo.jpg" />
-        </a>
         <Nuxt-link to="/login" />
-            <a
-              class="nav-link active styling__nav__link"
-              href=""
-              target="_blank"
-              >Home</a>
-            <a class="nav-link styling__nav__link" href="" target="_blank"
-              >Pricing</a
-            >
-            <b-nav-item>Docs</b-nav-item>
-            <b-nav-item>Resources</b-nav-item>
-            <a class="nav-link styling__nav__link" href="">Contact Us</a>
-            <Nuxt-link to="/login" class="btn btn-warning"
-              >Login <i class="fa fa-sign-in" aria-hidden="true"></i
-            ></Nuxt-link>
+        <a class="navbar-brand" href="#"><img class="navbar-logo" src="../assets/logo.jpg" /></a>
+      <ul>
+        <li style="float:right"><router-link to="/login">
+          <button
+            class="btn btn-lg btn-warning mt-3 cta"
+            type="button"
+            style="float:right"
+          >Login
+          </button></router-link>
+          </li>
+        <li style="float:right"><a href="#news">Contact Us</a></li>
+        <li style="float:right"><a href="#contact">Resources</a></li>
+        <li style="float:right"><a href="#news">Docs</a></li>
+        <li style="float:right"><a href="#contact">Pricing</a></li>
+        <li style="float:right"><a class="active" href="#home">Home</a></li>
+        </ul>
       </nav>
     </div>
   </header>
@@ -38,36 +37,37 @@
       <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="card mb-4 mx-auto">
           <div class="card-body">
-            <h5 class="card-title">Feature One</h5>
+            <h4 class="card-title">Feature One</h4>
             <p class="card-text">
               Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              bulk of the card's content.<br/>
+            <a href="#" class="btn1 btn-warning">Go somewhere</a>
             </p>
-            <a href="#" class="btn btn-warning">Go somewhere</a>
           </div>
         </div>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="card mb-4 mx-auto">
           <div class="card-body">
-            <h5 class="card-title">Feature Two</h5>
+            <h4 class="card-title">Feature Two</h4>
             <p class="card-text">
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
+              <br/>
+            <a href="#" class="btn1 btn-warning">Go somewhere</a>
             </p>
-            <a href="#" class="btn btn-warning">Go somewhere</a>
           </div>
         </div>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="card mb-4 mx-auto">
           <div class="card-body">
-            <h5 class="card-title">Feature Three</h5>
+            <h4 class="card-title">Feature Three</h4>
             <p class="card-text">
               Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              bulk of the card's content.<br/>
+            <a href="#" class="btn1 btn-warning">Go somewhere</a>
             </p>
-            <a href="#" class="btn btn-warning">Go somewhere</a>
           </div>
         </div>
       </div>
@@ -110,29 +110,71 @@ body {
   background-size: cover;
   overflow-x: hidden;
 }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+}
+
+li a {
+  display: block;
+  color:#888888;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.active {
+  color: #1a1a1a;
+}
+
+.btn {
+  background-color: #ffa500;
+  border: none;
+  color: black;
+  padding: 13px 30px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin:1%;
+  border-radius: 5px;
+}
+
+.btn1 {
+  background-color: #ffa500;
+  border: none;
+  color: black;
+  padding: 10px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin:1%;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
 .nav {
   padding-left: 2% !important;
   padding-right: 2% !important;
 }
 .navbar-brand {
   width: 100px;
-  height: 50px;
+  height: 80px;
 }
 
 .navbar-logo {
-  padding: 5px;
-  height: 5%;
-  width: 5%;
+  margin: 8px;
+  height: 4em;
+  width: 4em;
+  float:left;
 }
 
-.nav-link{
-  color: #000000;
-  align-items: right;
-  
-}
 main {
   height: 500px;
 }
+
 .heading {
   margin-top: 3rem;
   display: flex;
@@ -140,6 +182,7 @@ main {
   justify-content: center;
   flex-direction: column;
 }
+
 .cta {
   transition: all 0.5s;
 }
@@ -181,7 +224,19 @@ main {
   flex-direction: row;
 }
 
+.nav-link:active{
+color: #000000;
+}
+
 .card {
   margin-right: 3rem;
+  background-color: #ffffff;
+  width: 20em;
+  height: 200px;
+  font-family: "Open Sans", sans-serif;
+}
+.card-body{
+  padding: 3% 3%;
+  align-items: center;
 }
 </style>
