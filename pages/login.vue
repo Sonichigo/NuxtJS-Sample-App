@@ -1,9 +1,11 @@
 <template>
   <section>
-    <h2 class="title">{{ currentTitle }}</h2>
+    <div class="login-container">
+    <h1 class="title">{{ currentTitle }}</h1>
     <div class="loggedin" v-if="isLoggedIn">Hello User</div>
     <div class="formContainer" id="sawo-container" v-if="!isLoggedIn">
       <!-- The div in which sawo form is displayed -->
+    </div>
     </div>
   </section>
 </template>
@@ -40,8 +42,59 @@ export default {
 </script>
 
 <style>
+.container img {
+  flex: 0.6;
+  object-fit: contain;
+}
+
 #sawo-container {
-  width: 400px;
   height: 400px;
+  width: 300px;
+}
+.login-container {
+  flex: 0.4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 400px;
+  min-height: 400px;
+  padding: 20px;
+  margin-left:30%;
+  border-radius: 10px;
+  border: 1px solid grey;
+  background-color: #fff;
+  height : 80%;
+  color: #000;
+}
+
+.login-container h1 {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 48px;
+  color: #1f1e1e;
+}
+
+.login-container p {
+  padding: 0 10px 0 10px;
+  text-align: center;
+}
+
+
+@media (max-width: 400px) {
+  .container img {
+    display: none;
+  }
+
+  .login-container {
+    border: none;
+    flex: 1;
+  }
+
+  #sawo-container {
+    /* height: 500px; */
+    background-color: #bcedef;
+    width: 100%;
+  }
 }
 </style>

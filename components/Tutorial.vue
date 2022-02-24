@@ -1,20 +1,20 @@
 <template>
 <div>
-  <header>
     <div class="container">
       <nav
-        class="navbar navbar-expand-lg navbar-light primary-menu"
+        class="navbar nav-m navbar-light primary-menu"
         style="background-color: #fff">
         <Nuxt-link to="/login" />
         <a class="navbar-brand" href="#"><img class="navbar-logo" src="../assets/logo.jpg" /></a>
       <ul>
-        <li style="float:right"><router-link to="/login">
-          <button
-            class="btn btn-lg btn-warning mt-3 cta"
+        <li style="float:right"><Nuxt-link to="/login">
+          <a
+            class="btn1 btn-warning"
             type="button"
             style="float:right"
-          >Login
-          </button></router-link>
+          >
+          Login<font-awesome-icon icon="sign-in" style="font-size: 15px,float:right"/>
+          </a></Nuxt-link>
           </li>
         <li style="float:right"><a href="#news">Contact Us</a></li>
         <li style="float:right"><a href="#contact">Resources</a></li>
@@ -24,8 +24,6 @@
         </ul>
       </nav>
     </div>
-  </header>
-  
   <main>
     <div class="heading">
       <h1>Product Headline</h1>
@@ -93,6 +91,19 @@ export default {
 </script>
 
 <style>
+.container {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  box-shadow: 0 8px 8px #888888;
+}
+
+.nav-m {
+  background-color: #fff !important;
+  display: flex;
+  align-items: center;
+}
+
 .login {
   background-color: #ffa500;
   padding: 0.5rem;
@@ -109,7 +120,10 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   overflow-x: hidden;
+  width: 100%;
+  min-height: 100vh;
 }
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -131,7 +145,7 @@ li a {
 }
 
 .btn {
-  background-color: #ffa500;
+  background-color: rgb(255, 222, 64);
   border: none;
   color: black;
   padding: 13px 30px;
@@ -143,7 +157,7 @@ li a {
 }
 
 .btn1 {
-  background-color: #ffa500;
+  background-color: rgb(255, 222, 64);
   border: none;
   color: black;
   padding: 10px;
