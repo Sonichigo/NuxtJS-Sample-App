@@ -1,11 +1,10 @@
 <template>
   <footer>
     <div class="Footer_container__8-0SY container styling__footer__container">
-      <div class="container-lg row">
         <div class="col-md-4 col-sm-6 col-lg-4 col-xs-12">
           <div class="footer-columns">
             <div class="footer-column">
-              <h6>Support</h6>
+              <h4>Support</h4>
               <p>
                 To get in touch with us <br />write to us at <br /><b
                   ><a
@@ -30,6 +29,7 @@
           <div class="footer-columns">
             <div class="footer-column quick-links">
               <h6>Quick Links</h6>
+              <br/>
               <div class="col-6">
                 <ul>
                   <li>
@@ -131,9 +131,8 @@
           </div>
           <br />
         </div>
-      </div>
       <br />
-      <hr class="horizontal-row" />
+      <hr class="horizontal-row" >
       <div class="row mt-5">
         <div class="col-12 text-center">
           <p>All Rights Reserved | © Sawo Labs 2021</p>
@@ -154,6 +153,8 @@ footer {
   background-image: url("../assets/footerbg.png");
   background-repeat: no-repeat;
   background-size: cover;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 .footer-columns {
@@ -179,11 +180,5 @@ footer h3 {
 
 .social-links img {
   margin-right: 5px;
-}
-
-@media only screen and (max-width: 1000px) {
-  footer {
-    padding-top: 400px;
-  }
 }
 </style>
